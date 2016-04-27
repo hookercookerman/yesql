@@ -35,6 +35,10 @@
           (rewrite-query-for-jdbc (tokenize statement)
                                   parameters))
 
+  "SELECT \"Question?#\" FROM users WHERE country = :country"
+  {:country "gb"}
+  => ["SELECT \"Question?\" FROM users WHERE country = ?" "gb"]
+
   "SELECT age FROM users WHERE country = :country"
   {:country "gb"}
   => ["SELECT age FROM users WHERE country = ?" "gb"]
