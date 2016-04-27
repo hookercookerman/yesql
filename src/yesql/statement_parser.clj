@@ -17,6 +17,7 @@
    :string-delimiter identity
    :string-normal identity
    :parameter identity
+   :escaped-question-mark (constantly "?")
    :placeholder-parameter symbol
    :named-parameter symbol})
 
